@@ -1,0 +1,26 @@
+{
+    "company_code": "company1",
+    "accounts": [
+        {
+            "line_user_id": "test-id1",
+            "line_display_name": "test-name1",
+            "kot_key": "kot-key1",
+            "kot_number": "0001",
+            "kot_name": "kot-name1"
+        },
+        {
+            "line_user_id": "test-id2",
+            "line_display_name": "test-name2",
+            "kot_key": "kot-key2",
+            "kot_number": "0002",
+            "kot_name": "kot-name2"
+        },
+        {
+            "line_user_id": "test-id3",
+            "line_display_name": "test-name3",
+            "kot_key": "kot-key3",
+            "kot_number": "",
+            "kot_name": ""
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-linestamping-dev-225031-authRole",
+      "UnauthRoleArn": "arn:aws:iam::672057259712:role/amplify-linestamping-dev-225031-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::672057259712:role/amplify-linestamping-dev-225031-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-linestamping-dev-225031-deployment",
+      "UnauthRoleName": "amplify-linestamping-dev-225031-unauthRole",
+      "StackName": "amplify-linestamping-dev-225031",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:672057259712:stack/amplify-linestamping-dev-225031/79a18800-e01f-11ec-a160-0630f5047565",
+      "AmplifyAppId": "d6q5eokworuoi"
+    },
+    "categories": {
+      "auth": {
+        "linestampingb0cd6c02": {}
+      }
+    }
+  }
+}
