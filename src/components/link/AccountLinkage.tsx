@@ -1,11 +1,12 @@
+import { Auth } from "../../interfaces/auth";
 import { Navbar } from "../header/Navbar";
 import { Table } from "./table/Table";
 
-export function AccountLinkage() {
+export function AccountLinkage(props: Auth) {
   return (
     <div>
       <Navbar></Navbar>
-      <Table></Table>
+      <Table username={props.username}></Table>
     </div>
   );
 }

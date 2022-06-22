@@ -1,12 +1,13 @@
 export interface Linkage {
-    "company_code": string;
-    "accounts": LinkageAccount[];
+    "company_id": string;
+    "accounts": LinkageAccount[] | undefined;
 }
 
-interface LinkageAccount {
+export interface LinkageAccount {
     "line_user_id": string,
     "line_display_name": string,
-    "kot_number": string;
-    "kot_key": string;
-    "kot_name": string;
+    "employee_code": string;
+    "employee_key": string;
+    "employee_name": string;
+    "edited": boolean | undefined;
 }

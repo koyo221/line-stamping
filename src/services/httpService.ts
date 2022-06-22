@@ -8,8 +8,13 @@ import { isLocal } from "./utilityService";
  *
  * @returns Promise<any>
  */
-export async function fetchLinkage(): Promise<any> {
-    if (isLocal()) {
-        return axios.get("mocks/account-linkage.json");
-    }
+export async function fetchLinkage(id: any): Promise<any> {
+    return axios.get(`https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/user?id=${id}`)
+}
+
+export async function postKotCodes(body: any) {
+    return await axios.post(
+        `https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/user`,
+        body
+    )
 }

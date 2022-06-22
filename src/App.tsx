@@ -21,7 +21,8 @@ function App() {
         >
         {({ signOut, user }) => (
           <div className="App">
-              <AccountLinkage></AccountLinkage>
+            <div>{user?.username}</div>
+              <AccountLinkage username={user?.username}></AccountLinkage>
             <button onClick={signOut}>ログアウト</button>
           </div>
         )}
