@@ -21,9 +21,7 @@ function App() {
         >
         {({ signOut, user }) => (
           <div className="App">
-            <div>{user?.username}</div>
-              <AccountLinkage username={user?.username}></AccountLinkage>
-            <button onClick={signOut}>ログアウト</button>
+              <AccountLinkage username={user?.username} accessToken={user?.getSignInUserSession()?.getIdToken().getJwtToken()} signOut={signOut}></AccountLinkage>
           </div>
         )}
       </Authenticator>

@@ -1,6 +1,4 @@
 import axios from "axios";
-import { isLocal } from "./utilityService";
-
 
 /**
  * FetchLinkageAPI
@@ -8,13 +6,47 @@ import { isLocal } from "./utilityService";
  *
  * @returns Promise<any>
  */
-export async function fetchLinkage(id: any): Promise<any> {
-    return axios.get(`https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/user?id=${id}`)
+export async function fetchLinkage(id: any, accessToken: any): Promise<any> {
+    return axios.get(
+        `https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/user?id=${id}`,
+        {
+            headers: {
+                Authorization: accessToken
+            }
+        }
+    )
 }
 
-export async function postKotCodes(body: any) {
+export async function fetchCompanyInfo(id:any, accessToken: any): Promise<any> {
+    return axios.get(
+        `https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/company?id=${id}`,
+        {
+            headers: {
+                Authorization: accessToken
+            }
+        }
+    )
+}
+export async function postCompanyInfo(body:any, accessToken: any): Promise<any> {
+    return axios.post(
+        `https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/company`,
+        body,
+        {
+            headers: {
+                Authorization: accessToken
+            }
+        }
+    )
+}
+
+export async function postKotCodes(body: any, accessToken: any) {
     return await axios.post(
         `https://9fl5wezq72.execute-api.ap-northeast-1.amazonaws.com/dev/user`,
-        body
+        body,
+        {
+            headers: {
+                Authorization: accessToken
+            }
+        }
     )
 }
